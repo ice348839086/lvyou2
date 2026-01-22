@@ -4,6 +4,7 @@ import { generateItineraryPrompt, parseItineraryResponse, validateItinerary } fr
 
 // 不使用edge runtime,因为需要使用fetch
 export const runtime = 'nodejs';
+export const maxDuration = 60; // 60秒超时限制
 
 export async function POST(request: NextRequest) {
   try {
@@ -43,37 +44,67 @@ export async function POST(request: NextRequest) {
     const apiKey = process.env.DEEPSEEK_API_KEY;
     const apiUrl = process.env.DEEPSEEK_API_URL || 'https://api.deepseek.com/v1';
     
+    console.log('[API] Starting AI generation...', {
+      destination,
+      days,
+      hasApiKey: !!apiKey,
+      apiUrl,
+    });
+    
     if (!apiKey) {
+      console.error('[API] Missing DEEPSEEK_API_KEY');
       return NextResponse.json(
-        { error: 'AI service not configured. Please set DEEPSEEK_API_KEY in .env.local' },
+        { error: 'AI service not configured. Please set DEEPSEEK_API_KEY in environment variables' },
         { status: 500 }
       );
     }
 
-    // 调用DeepSeek Chat Completion API
-    const response = await fetch(`${apiUrl}/chat/completions`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        model: 'deepseek-chat',
-        messages: [
-          {
-            role: 'user',
-            content: prompt,
-          },
-        ],
-        max_tokens: 4096,
-        temperature: 0.7,
-      }),
-    });
+    // 调用DeepSeek Chat Completion API (增加超时控制)
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 55000); // 55秒超时
+    
+    try {
+      const response = await fetch(`${apiUrl}/chat/completions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: 'deepseek-chat',
+          messages: [
+            {
+              role: 'user',
+              content: prompt,
+            },
+          ],
+          max_tokens: 4096,
+          temperature: 0.7,
+        }),
+        signal: controller.signal,
+      });
+      
+      clearTimeout(timeout);
 
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      console.error('DeepSeek API Error:', errorData);
-      throw new Error(`DeepSeek API error: ${response.status} ${response.statusText}`);
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('[API] DeepSeek API Error:', {
+          status: response.status,
+          statusText: response.statusText,
+          errorData,
+        });
+        throw new Error(`DeepSeek API error: ${response.status} ${response.statusText}`);
+      }
+    } catch (fetchError: any) {
+      clearTimeout(timeout);
+      if (fetchError.name === 'AbortError') {
+        console.error('[API] Request timeout after 55s');
+        return NextResponse.json(
+          { error: 'AI生成超时,请稍后重试' },
+          { status: 504 }
+        );
+      }
+      throw fetchError;
     }
 
     const data = await response.json();
@@ -115,11 +146,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    console.log('[API] Generation successful');
     return NextResponse.json(itineraryData);
   } catch (error: any) {
-    console.error('API Error:', error);
+    console.error('[API] Error:', {
+      message: error.message,
+      stack: error.stack,
+      name: error.name,
+    });
     return NextResponse.json(
-      { error: error.message || 'Internal server error' },
+      { 
+        error: error.message || 'Internal server error',
+        details: process.env.NODE_ENV === 'development' ? error.stack : undefined
+      },
       { status: 500 }
     );
   }

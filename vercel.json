@@ -3,5 +3,10 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
-  "regions": ["hkg1"]
+  "regions": ["hkg1"],
+  "functions": {
+    "app/api/generate-itinerary/route.ts": {
+      "maxDuration": 60
+    }
+  }
 }
