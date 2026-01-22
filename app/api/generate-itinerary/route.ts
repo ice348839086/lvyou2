@@ -4,7 +4,8 @@ import { generateItineraryPrompt, parseItineraryResponse, validateItinerary } fr
 
 // 不使用edge runtime,因为需要使用fetch
 export const runtime = 'nodejs';
-export const maxDuration = 60; // 60秒超时限制
+// 注意: Vercel免费版最大超时10秒,Pro版才支持更长时间
+// export const maxDuration = 60;
 
 export async function POST(request: NextRequest) {
   try {
