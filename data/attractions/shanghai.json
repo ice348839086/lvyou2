@@ -1,0 +1,163 @@
+[
+  {
+    "id": "shanghai-waitan",
+    "name": "外滩",
+    "city": "shanghai",
+    "type": "cultural",
+    "location": {
+      "lat": 31.2397,
+      "lng": 121.4912,
+      "address": "上海市黄浦区中山东一路"
+    },
+    "duration": {
+      "quick": 60,
+      "normal": 120,
+      "deep": 180
+    },
+    "openingHours": {
+      "weekday": "全天开放",
+      "weekend": "全天开放"
+    },
+    "ticketInfo": {
+      "price": 0,
+      "needReservation": false
+    },
+    "crowdLevel": {
+      "morning": "low",
+      "afternoon": "medium",
+      "evening": "high"
+    },
+    "tags": ["免费", "夜景", "地标建筑", "万国建筑"],
+    "suitableFor": ["family", "couple", "solo", "friends"],
+    "weather": ["any"],
+    "aiSummary": {
+      "highlights": [
+        "万国建筑群：哥特式、巴洛克式、新古典主义建筑",
+        "黄浦江夜景：18:00亮灯后最美",
+        "和平饭店：百年传奇酒店"
+      ],
+      "tips": [
+        "夜景比白天更震撼,建议傍晚前往",
+        "沙美大楼顶楼咖啡厅可拍外滩三件套",
+        "外白渡桥是《情深深雨濛濛》取景地"
+      ],
+      "avoidPitfalls": [
+        "节假日人流量巨大,注意安全",
+        "部分建筑内部不对外开放"
+      ],
+      "hiddenGems": [
+        "乍浦路桥：东方明珠+邮政大楼同框机位",
+        "原新天安堂：哥特式教堂遗址,红砖外墙超好拍"
+      ]
+    },
+    "xiaohongshuTags": ["外滩夜景", "上海地标", "万国建筑"],
+    "relatedAttractions": ["shanghai-dongfangmingzhu", "shanghai-nanjinglu"]
+  },
+  {
+    "id": "shanghai-wukanglu",
+    "name": "武康路",
+    "city": "shanghai",
+    "type": "cultural",
+    "location": {
+      "lat": 31.2033,
+      "lng": 121.4375,
+      "address": "上海市徐汇区武康路"
+    },
+    "duration": {
+      "quick": 90,
+      "normal": 150,
+      "deep": 240
+    },
+    "openingHours": {
+      "weekday": "全天开放",
+      "weekend": "全天开放"
+    },
+    "ticketInfo": {
+      "price": 0,
+      "needReservation": false
+    },
+    "crowdLevel": {
+      "morning": "low",
+      "afternoon": "high",
+      "evening": "medium"
+    },
+    "tags": ["免费", "文艺", "网红打卡", "梧桐树"],
+    "suitableFor": ["couple", "solo", "friends"],
+    "weather": ["sunny", "any"],
+    "aiSummary": {
+      "highlights": [
+        "武康大楼：上海地标性建筑",
+        "梧桐树街区：法式风情街道",
+        "文艺咖啡店：沿路有很多特色咖啡馆"
+      ],
+      "tips": [
+        "适合慢慢散步,感受上海的文艺气息",
+        "秋季梧桐叶黄时最美",
+        "周边有宋庆龄故居、安福路等可一起游览"
+      ],
+      "avoidPitfalls": [
+        "周末人流较多,建议工作日前往",
+        "部分咖啡店需要排队"
+      ],
+      "hiddenGems": [
+        "安福路：文艺小店和咖啡店聚集地",
+        "复兴西路：梧桐树更密集,人更少"
+      ]
+    },
+    "xiaohongshuTags": ["武康路", "武康大楼", "上海文艺"],
+    "relatedAttractions": ["shanghai-songqingling", "shanghai-anfu"]
+  },
+  {
+    "id": "shanghai-yuyuan",
+    "name": "豫园",
+    "city": "shanghai",
+    "type": "historical",
+    "location": {
+      "lat": 31.2279,
+      "lng": 121.4925,
+      "address": "上海市黄浦区安仁街137号"
+    },
+    "duration": {
+      "quick": 60,
+      "normal": 90,
+      "deep": 120
+    },
+    "openingHours": {
+      "weekday": "08:45-17:00",
+      "weekend": "08:45-17:00"
+    },
+    "ticketInfo": {
+      "price": 30,
+      "needReservation": false
+    },
+    "crowdLevel": {
+      "morning": "low",
+      "afternoon": "high",
+      "evening": "low"
+    },
+    "tags": ["明代园林", "历史文化", "江南园林"],
+    "suitableFor": ["family", "couple", "solo"],
+    "weather": ["any"],
+    "aiSummary": {
+      "highlights": [
+        "明代古典园林：江南园林代表作",
+        "大假山：黄石堆砌,园中最高点",
+        "点春堂：豫园最大建筑"
+      ],
+      "tips": [
+        "建议早上9点前到达,避开人流",
+        "游览约1-1.5小时即可",
+        "周边城隍庙小吃街可以一起逛"
+      ],
+      "avoidPitfalls": [
+        "节假日人流量巨大",
+        "小吃街价格较贵,性价比不高"
+      ],
+      "hiddenGems": [
+        "内园：相对清净,园林精华所在"
+      ]
+    },
+    "xiaohongshuTags": ["豫园", "江南园林", "上海老城厢"],
+    "relatedAttractions": ["shanghai-chenghuangmiao"]
+  }
+]

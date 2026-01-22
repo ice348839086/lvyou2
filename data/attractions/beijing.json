@@ -1,0 +1,274 @@
+[
+  {
+    "id": "beijing-gugong",
+    "name": "故宫",
+    "city": "beijing",
+    "type": "historical",
+    "location": {
+      "lat": 39.9163,
+      "lng": 116.3972,
+      "address": "北京市东城区景山前街4号"
+    },
+    "duration": {
+      "quick": 120,
+      "normal": 180,
+      "deep": 300
+    },
+    "openingHours": {
+      "weekday": "08:30-17:00",
+      "weekend": "08:30-17:00",
+      "closedDays": ["周一"]
+    },
+    "ticketInfo": {
+      "price": {
+        "adult": 60,
+        "senior": 30,
+        "child": 0
+      },
+      "needReservation": true,
+      "reservationUrl": "https://www.dpm.org.cn/",
+      "reservationAdvanceDays": 7
+    },
+    "crowdLevel": {
+      "morning": "high",
+      "afternoon": "high",
+      "evening": "low"
+    },
+    "tags": ["历史文化", "世界遗产", "必游景点", "需预约"],
+    "suitableFor": ["family", "couple", "solo", "friends"],
+    "weather": ["sunny", "any"],
+    "aiSummary": {
+      "highlights": [
+        "三大殿：太和殿、中和殿、保和殿",
+        "珍宝馆：清代皇家珍宝",
+        "钟表馆：各国进贡的精美钟表"
+      ],
+      "tips": [
+        "从东华门进入最快,避开人流",
+        "上午9点前人少,游览体验更好",
+        "珍宝馆和钟表馆下午3点前购票"
+      ],
+      "avoidPitfalls": [
+        "周一闭馆,需提前规划",
+        "需提前7天预约,每天20:00放票",
+        "无回流票,错过时间无法进入"
+      ],
+      "hiddenGems": [
+        "神武门出口的角楼咖啡",
+        "御花园的古柏树群",
+        "文华殿的陶瓷馆"
+      ]
+    },
+    "xiaohongshuTags": ["故宫打卡", "北京必去", "历史建筑"],
+    "relatedAttractions": ["beijing-jingshan", "beijing-tiananmen"]
+  },
+  {
+    "id": "beijing-jingshan",
+    "name": "景山公园",
+    "city": "beijing",
+    "type": "natural",
+    "location": {
+      "lat": 39.9254,
+      "lng": 116.3944,
+      "address": "北京市西城区景山西街44号"
+    },
+    "duration": {
+      "quick": 60,
+      "normal": 90,
+      "deep": 120
+    },
+    "openingHours": {
+      "weekday": "06:30-21:00",
+      "weekend": "06:30-21:00"
+    },
+    "ticketInfo": {
+      "price": 2,
+      "needReservation": false
+    },
+    "crowdLevel": {
+      "morning": "medium",
+      "afternoon": "high",
+      "evening": "medium"
+    },
+    "tags": ["俯瞰故宫", "拍照圣地", "性价比高"],
+    "suitableFor": ["family", "couple", "solo", "friends"],
+    "weather": ["sunny"],
+    "aiSummary": {
+      "highlights": [
+        "万春亭：俯瞰故宫全景的最佳位置",
+        "中轴线视角：北京城市中轴线尽收眼底"
+      ],
+      "tips": [
+        "傍晚时分拍照最美,夕阳下的故宫金碧辉煌",
+        "登顶约15分钟,台阶较多注意体力"
+      ],
+      "avoidPitfalls": [
+        "雾霾天气视野不佳,建议查看天气预报"
+      ],
+      "hiddenGems": [
+        "东侧的牡丹园,春季盛开时非常美丽"
+      ]
+    },
+    "xiaohongshuTags": ["景山公园", "俯瞰故宫", "拍照打卡"],
+    "relatedAttractions": ["beijing-gugong", "beijing-beihai"]
+  },
+  {
+    "id": "beijing-changcheng",
+    "name": "八达岭长城",
+    "city": "beijing",
+    "type": "historical",
+    "location": {
+      "lat": 40.3593,
+      "lng": 116.0153,
+      "address": "北京市延庆区G6京藏高速58号出口"
+    },
+    "duration": {
+      "quick": 180,
+      "normal": 240,
+      "deep": 300
+    },
+    "openingHours": {
+      "weekday": "07:30-18:00",
+      "weekend": "07:30-18:00"
+    },
+    "ticketInfo": {
+      "price": 40,
+      "needReservation": false
+    },
+    "crowdLevel": {
+      "morning": "low",
+      "afternoon": "high",
+      "evening": "low"
+    },
+    "tags": ["世界遗产", "必游景点", "登高望远"],
+    "suitableFor": ["family", "couple", "friends"],
+    "weather": ["sunny"],
+    "aiSummary": {
+      "highlights": [
+        "北1-北8段：相对平缓,适合老人小孩",
+        "北8-北11段：较陡峭,风景更壮观"
+      ],
+      "tips": [
+        "早上7-8点到达,避开旅游团",
+        "穿舒适的运动鞋,台阶陡峭",
+        "建议包车或打车前往,约1.5小时"
+      ],
+      "avoidPitfalls": [
+        "节假日人流量巨大,建议工作日前往",
+        "冬季寒冷多风,注意保暖"
+      ],
+      "hiddenGems": [
+        "北12楼：人少景美,可以拍到空旷的长城"
+      ]
+    },
+    "xiaohongshuTags": ["八达岭长城", "不到长城非好汉", "北京长城"],
+    "relatedAttractions": ["beijing-juyongguan"]
+  },
+  {
+    "id": "beijing-tiananmen",
+    "name": "天安门广场",
+    "city": "beijing",
+    "type": "cultural",
+    "location": {
+      "lat": 39.9075,
+      "lng": 116.3972,
+      "address": "北京市东城区长安街"
+    },
+    "duration": {
+      "quick": 30,
+      "normal": 60,
+      "deep": 90
+    },
+    "openingHours": {
+      "weekday": "05:00-22:00",
+      "weekend": "05:00-22:00"
+    },
+    "ticketInfo": {
+      "price": 0,
+      "needReservation": false
+    },
+    "crowdLevel": {
+      "morning": "high",
+      "afternoon": "medium",
+      "evening": "medium"
+    },
+    "tags": ["免费", "地标建筑", "升旗仪式"],
+    "suitableFor": ["family", "couple", "solo", "friends"],
+    "weather": ["any"],
+    "aiSummary": {
+      "highlights": [
+        "升旗仪式：每天日出时分举行",
+        "人民英雄纪念碑",
+        "毛主席纪念堂"
+      ],
+      "tips": [
+        "看升旗需要提前1小时到达排队",
+        "从天安门西红墙安检01口进入,排队较少",
+        "需要携带身份证安检"
+      ],
+      "avoidPitfalls": [
+        "广场禁止携带大包,需寄存",
+        "升旗时间每天不同,需查询当日时间"
+      ],
+      "hiddenGems": [
+        "国家博物馆就在广场东侧,可以一起游览"
+      ]
+    },
+    "xiaohongshuTags": ["天安门", "升旗仪式", "北京地标"],
+    "relatedAttractions": ["beijing-gugong", "beijing-guobo"]
+  },
+  {
+    "id": "beijing-yiheyuan",
+    "name": "颐和园",
+    "city": "beijing",
+    "type": "historical",
+    "location": {
+      "lat": 40.0005,
+      "lng": 116.2753,
+      "address": "北京市海淀区新建宫门路19号"
+    },
+    "duration": {
+      "quick": 120,
+      "normal": 180,
+      "deep": 240
+    },
+    "openingHours": {
+      "weekday": "06:30-18:00",
+      "weekend": "06:30-18:00"
+    },
+    "ticketInfo": {
+      "price": 20,
+      "needReservation": false
+    },
+    "crowdLevel": {
+      "morning": "low",
+      "afternoon": "high",
+      "evening": "low"
+    },
+    "tags": ["皇家园林", "世界遗产", "昆明湖"],
+    "suitableFor": ["family", "couple", "solo"],
+    "weather": ["sunny", "any"],
+    "aiSummary": {
+      "highlights": [
+        "长廊：世界最长的画廊",
+        "佛香阁：登高俯瞰昆明湖",
+        "十七孔桥：颐和园标志性建筑"
+      ],
+      "tips": [
+        "东门进北如意门出,不走回头路",
+        "不爬山也能看到所有精华景点",
+        "可以乘船游览昆明湖"
+      ],
+      "avoidPitfalls": [
+        "园区很大,建议穿舒适的鞋",
+        "夏季游客较多,建议早上前往"
+      ],
+      "hiddenGems": [
+        "后山的苏州街,清幽人少",
+        "西堤的柳树,春天非常美"
+      ]
+    },
+    "xiaohongshuTags": ["颐和园", "皇家园林", "昆明湖"],
+    "relatedAttractions": ["beijing-yuanmingyuan"]
+  }
+]
